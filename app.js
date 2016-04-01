@@ -39,7 +39,8 @@ app.get("/",function (req,res)
 		 res.render('weather_rss.ejs',{usernam:req.user.username});
 	}
 	else
-	res.render('login.ejs', { message: req.flash('loginMessage'),message1:req.flash('signupMessage') });
+	//res.render('login.ejs', { message: req.flash('loginMessage'),message1:req.flash('signupMessage') });
+res.render('file.html');
          
     });
 
