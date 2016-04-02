@@ -44,12 +44,13 @@
 
    <div class="col s6">
      <% if (usernam.length > 0) { %>
-                <h4 style="color:#080">Welcome <%= usernam %></h4>
+                <h5>Welcome <u style="color:#B8A"><%= usernam %></u></h5>
             <% } %>
-			<br/><br/>
+			<center><h4>Weather Report</h4></center><hr/>
+			<p class="flow-text">Enter City Name and Press Enter</p>
    <div class="input-field col s8">
           <input id="selectBox" type="text"  class="validate" required="true">
-          <label for="selectBox">Enter place and press enter</label>
+          <label for="selectBox">Enter place</label>
         </div>
 		<br/><br/><br/>
  <div id="weather"></div>
@@ -85,7 +86,7 @@ $('#selectBox').change(function(){
     var weather = data.weather[0].description;
     
     // Prints: "Current weather for Castlebar, IE: light rain"
-    $('#weather').html('<center> <br><h4>Weather results</h4> <br><hr><br><h4>Current weather for ' + city + ', ' + country + '</h4>'+' <h4>Weather : ' + weather +'</h4><h4> Temperature : '+ temp +'&#8451;'+ '</h4><h4> Pressure : '+ pressure +'hpa'+ '</h4><h4> Humidity :' + humidity +'%'+'</h4><h4> Wind :'+ wind+'m/s' +'</h4></center>');
+    $('#weather').html('<center><br><h5>Current weather for <span class="red-text">' + city + ', ' + country + '</span></h5><h5><table><tr><td>'+'Weather </td><td>:</td><td> ' + weather +'</td></tr><tr><td>Temperature </td><td>: </td><td>'+ temp +'&#8451;</td></tr><tr><td>'+ 'Pressure </td><td>: </td><td>'+ pressure +'hpa</td></tr><tr><td>'+ 'Humidity </td><td>:</td><td>' + humidity +'%</td></tr><tr><td>'+'Wind </td><td>:</td><td>'+ wind+'m/s</td></tr></table>' +'</h5></center>');
   });
 });
 </script>
